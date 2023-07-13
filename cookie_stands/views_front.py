@@ -14,7 +14,7 @@ class CookieStandListView(LoginRequiredMixin, ListView):
 class CookieStandDetailView(LoginRequiredMixin, DetailView):
     template_name = "CookieStands/cookieStands_detail.html"
     model = CookieStand
-    success_url = reverse_lazy('CookieStand_list')
+    
 
 
 
@@ -27,7 +27,7 @@ class CookieStandUpdateView(LoginRequiredMixin, UpdateView):
 class CookieStandCreateView(LoginRequiredMixin, CreateView):
     template_name = 'CookieStands/cookieStands_create.html'
     model = CookieStand
-    fields = ["name", "rating", "reviewer"] # "__all__" for all of them
+    fields = "__all__"
     success_url = reverse_lazy('CookieStand_list')
 
 

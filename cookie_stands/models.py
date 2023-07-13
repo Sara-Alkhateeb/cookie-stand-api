@@ -4,17 +4,6 @@ from django.urls import reverse
 
 
 class CookieStand(models.Model):
-    name = models.CharField(max_length=256)
-    rating = models.IntegerField(default=0, blank=True)
-    reviewer = models.ForeignKey(
-        get_user_model(), on_delete=models.CASCADE, null=True, blank=True
-    )
-    description = models.TextField(default="", null=True, blank=True)
-
-    def __str__(self):
-        return self.name
-
-class CookieStandDetail(models.Model):
     location = models.CharField(max_length=256)
     owner = models.ForeignKey(
         get_user_model(), on_delete=models.CASCADE, null=True, blank=True
@@ -29,6 +18,7 @@ class CookieStandDetail(models.Model):
         return self.location
 
     def get_absolute_url(self):
-        return reverse('CookieStand_detail', args=[str(self.pk)])
+        return reverse('cookiestand_detail', args=[str(self.pk)])
+
 
 
