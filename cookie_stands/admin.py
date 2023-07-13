@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import CookieStand, CookieStandDetail
+from .models import CookieStand
 
 # Register your models here.
 admin.site.register(CookieStand)
-admin.site.register(CookieStandDetail)
+
 
