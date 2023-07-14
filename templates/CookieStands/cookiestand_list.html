@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container mx-auto mt-8">
+    <h1 class="text-4xl font-bold text-center">All Cookie Stands</h1>
+    <div class="w-1/2 mx-auto mt-8">
+      {% for cookie in cookiestands %}
+        <a href="{% url 'cookiestand_detail' cookie.pk %}" class="block px-4 py-4 mb-4 text-white bg-blue-700 rounded-lg cursor-pointer hover:bg-blue-800">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold">{{ cookie.name }}</h2>
+            <span class="text-sm text-white-400">{{ cookie.location }}</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock content %}

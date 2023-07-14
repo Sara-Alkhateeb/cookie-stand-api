@@ -3,35 +3,30 @@ from django.views.generic import ListView, DetailView, UpdateView, CreateView, D
 from django.urls import reverse_lazy
 from .models import CookieStand
 
-
 class CookieStandListView(LoginRequiredMixin, ListView):
-    template_name = "CookieStands/cookieStands_list.html"
+    template_name = "CookieStands/cookiestand_list.html"
     model = CookieStand
-    context_object_name = "CookieStands"
-
-
+    context_object_name = "cookiestands"
 
 class CookieStandDetailView(LoginRequiredMixin, DetailView):
-    template_name = "CookieStands/cookieStands_detail.html"
+    template_name = "CookieStands/cookiestand_detail.html"
     model = CookieStand
-    
-
 
 
 class CookieStandUpdateView(LoginRequiredMixin, UpdateView):
-    template_name = "CookieStands/cookieStands_update.html"
+    template_name = "CookieStands/cookiestand_update.html"
     model = CookieStand
     fields = "__all__"
 
 
 class CookieStandCreateView(LoginRequiredMixin, CreateView):
-    template_name = 'CookieStands/cookieStands_create.html'
+    template_name = "CookieStands/cookiestand_create.html"
     model = CookieStand
     fields = "__all__"
-    success_url = reverse_lazy('CookieStand_list')
+    success_url = reverse_lazy("cookiestand_list")
 
 
 class CookieStandDeleteView(LoginRequiredMixin, DeleteView):
-    template_name = "CookieStands/cookieStands_delete.html"
+    template_name = "CookieStands/cookiestand_delete.html"
     model = CookieStand
-    success_url = reverse_lazy("CookieStand_list")
+    success_url = reverse_lazy("cookiestand_list")

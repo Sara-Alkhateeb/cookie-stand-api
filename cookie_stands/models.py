@@ -2,7 +2,6 @@ from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
 
-
 class CookieStand(models.Model):
     location = models.CharField(max_length=256)
     owner = models.ForeignKey(
@@ -19,6 +18,4 @@ class CookieStand(models.Model):
 
     def get_absolute_url(self):
         return reverse('cookiestand_detail', args=[str(self.pk)])
-
-
 
