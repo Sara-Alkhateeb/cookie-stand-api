@@ -18,3 +18,4 @@ class CookieStandDetail(RetrieveUpdateDestroyAPIView):
     serializer_class = CookieStandSerializer
 
 
+

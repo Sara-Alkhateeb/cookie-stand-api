@@ -23,5 +23,7 @@ You need to [install Python3](https://wsvincent.com/install-python/#install-pyth
 - activate `.venv` using this command in terminal `source .venv/bin/activate`
 - run `python manage.py test` to test the project
 
+### Note
+[Click here to .env content ](./project/envExample.md)
 
 

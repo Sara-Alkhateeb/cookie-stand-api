@@ -8,9 +8,11 @@ from .views_front import (
 )
 
 urlpatterns = [
-    path("", CookieStandListView.as_view(), name="CookieStand_list"),
-    path('<int:pk>/', CookieStandDetailView.as_view(), name="CookieStand_detail"),
-    path("create/", CookieStandCreateView.as_view(), name="CookieStand_create"),
-    path("<int:pk>/update/", CookieStandUpdateView.as_view(), name="CookieStand_update"),
-    path("<int:pk>/delete/", CookieStandDeleteView.as_view(), name="CookieStand_delete"),
+    path("", CookieStandListView.as_view(), name="cookiestand_list"),
+    path("<int:pk>/", CookieStandDetailView.as_view(), name="cookiestand_detail"),
+    path("create/", CookieStandCreateView.as_view(), name="cookiestand_create"),
+    path("<int:pk>/update/", CookieStandUpdateView.as_view(), name="cookiestand_update"),
+    path("<int:pk>/delete/", CookieStandDeleteView.as_view(), name="cookiestand_delete"),
 ]
+
+

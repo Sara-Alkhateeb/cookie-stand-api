@@ -5,3 +5,4 @@ from .models import CookieStand
 admin.site.register(CookieStand)
 
 
+
