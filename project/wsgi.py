@@ -15,5 +15,5 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
 
 application = get_wsgi_application()
 
-# vercel deployment requires "app"
+# Vercel needs variable named app
 app = application
